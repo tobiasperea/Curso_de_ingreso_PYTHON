@@ -33,7 +33,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        Caja_de_Texto = self.txt_nombre.delete(0,"Nombre")
+        nombre = prompt(title="Pregunta", prompt="Cual es tu nombre?")
+        self.txt_nombre.delete(0, 1000)
+        self.txt_nombre.insert(0, nombre)
        
         
     
