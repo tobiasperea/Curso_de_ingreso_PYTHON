@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre:Tobias
+apellido:Perea
 ---
 Ejercicio: Match_02
 ---
@@ -41,7 +41,16 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        meses = self.combobox_mes.get()
+
+        match meses:
+            case "Enero" | "Febrero" | "Marzo" | "Abril" | "Mayo" | "Junio":
+                alert(title="Meses", message= "Falta para el invierno")
+            case "Julio" | "Agosto":
+                alert(title="Meses", message="Abrigate que hace frio")
+            case "Septiembre" | "Octubre" | "Noviembre" | "Diciembre":
+                alert(title="Meses", message="Ya pasamos el frio, ahora calor")
+
     
     
 if __name__ == "__main__":

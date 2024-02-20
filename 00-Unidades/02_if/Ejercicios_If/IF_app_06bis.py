@@ -51,7 +51,7 @@ class App(customtkinter.CTk):
         if altura >= 180 and altura < 200:
             alert(title="POSICION", message="ALERO")
         
-        if altura >=200:
+        else:
             alert(title="POSICION", message="ALA-PIVOT O PIVOT")
 
         

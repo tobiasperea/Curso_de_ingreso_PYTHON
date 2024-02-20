@@ -36,9 +36,9 @@ class App(customtkinter.CTk):
         altura = float(edad)
 
         if altura >= 1.80:
-            alert(title="Pocision", message="Es pivot")
+            alert(title="Posicion", message="Es pivot")
         else:
-            alert(title="Pocision", message="No es pivot")
+            alert(title="Posicion", message="No es pivot")
 
 
 if __name__ == "__main__":

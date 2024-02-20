@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Tobias 
+apellido:Perea
 ---
 TP: Iluminación
 ---
@@ -43,7 +43,61 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
-        pass
+        marcas = self.combobox_marca.get()
+        cantidad = self.combobox_cantidad.get()
+        cantidad = int(cantidad)
+        lampara = int(800)
+        precio = lampara * cantidad
+        precio = int(precio)
+
+        match cantidad:
+            case 6 | 7 | 8 | 9 | 10 | 11 | 12:
+                precio_final = precio * 0.5
+                
+
+            case 5:
+
+                match marcas:
+                    case "ArgentinaLuz":
+                        precio_final = precio * 0.6
+                        
+                    case "FelipeLamparas" | "JeLuz" | "HazIluminacion" | "Osram":
+                        precio_final = precio * 0.7
+                        
+            
+            case 4: 
+                match marcas:
+                    case "ArgentinaLuz" | "FelipeLamparas":
+                        precio_final = precio * 0.75
+                        
+                    case "JeLuz" | "HazIluminacion" | "Osram":
+                        precio_final = precio * 0.80
+                        
+            
+            case 3:
+                match marcas:
+                    case "ArgentinaLuz":
+                        precio_final = precio * 0.85
+                        
+                    case "FelipeLamparas":
+                        precio_final = precio * 0.90
+                        
+                    case "JeLuz" | "HazIluminacion" | "Osram":
+                        precio_final = precio * 0.95
+                        
+        if precio_final == 4000:
+            descuento_final = precio_final * 0.95
+            alert(title="Precio", message= descuento_final)
+                    
+                    
+        
+            
+
+
+
+
+
+
         
     
 if __name__ == "__main__":
